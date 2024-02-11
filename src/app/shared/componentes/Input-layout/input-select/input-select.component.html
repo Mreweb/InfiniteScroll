@@ -1,0 +1,10 @@
+ <label [class]="labelClassName">
+  {{label}}
+  <select [class]="className" [formControl]="formControlCustom" ngDefaultControl>
+    <option value="">-- انتخاب کنید --</option>
+      <option *ngFor="let item of selectItems" 
+        [value]="item.key" >
+      {{item.value}}
+    </option>
+  </select>
+</label>

@@ -1,0 +1,4 @@
+<div *ngIf="variable.hasError('required') &&variable.dirty && require && !notDirty"   class="ui basic  red below pointing   prompt  label transition visible">{{message}} </div>
+<div *ngIf="variable.invalid && !require && !variable.hasError('required')" class="ui basic  red below pointing   prompt  label transition visible">{{message}} </div>
+<div *ngIf="variable.hasError('required') && variable.length===0  && require"   class="ui basic  red below pointing   prompt  label transition visible">{{message}} </div>
+<div *ngIf="variable.hasError('required') &&notDirty && require "   class="ui basic  red below pointing   prompt  label transition visible">{{message}} </div>

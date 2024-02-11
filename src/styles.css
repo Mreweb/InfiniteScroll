@@ -1,0 +1,96 @@
+/* You can add global styles to this file, and also import other style files */
+
+.ngx-pagination {
+    margin: 0 !important;
+    padding: 10px 0 !important;
+}
+.ngx-pagination li {
+    margin-right: 0.0625rem;
+    border-radius: 0;
+    padding: 2px !important;
+    border: 1px solid #ebe4e4;
+    margin: 0 2px;
+    min-width: 40px;
+    text-align: center;
+}
+.ngx-pagination a, .ngx-pagination button {
+    cursor: pointer;
+    text-decoration: none;
+}
+.card .card-title {
+    font-weight: 900;
+    color: #000000;
+    font-weight: normal;
+    margin-bottom: 0;
+    text-transform: capitalize;
+    font-size: 1.125rem !important;
+    padding: 16px !important;
+}
+
+.dataTables_filter{
+    direction: rtl;
+    text-align: justify;
+    float: left;
+    margin-right: 8px; 
+    font-size: 12px;
+}
+.dataTables_filter .form-control{
+    padding: 8px !important;
+}
+.table thead th {
+    background: #f4f4f4;
+    border: 3px solid #c9c9c9;
+    text-align: center;
+}
+.table.text-center th ,
+    .table.text-center td {
+    text-align: center !important;
+}
+table .fit{
+    width:1px;
+    white-space: nowrap;
+}
+
+
+.datepicker-outer-container[_ngcontent-ng-c3549933667] {
+    direction: rtl;
+    vertical-align: top;
+    min-width: 200px;
+    font-size: 12px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    -webkit-user-select: none;
+    user-select: none;
+    text-align: center;
+    border-radius: 5px;
+    border-width: 1px;
+    border-style: solid;
+    position: absolute;
+    z-index: 10000;
+    width: 220px;
+}
+
+
+
+.page-title{
+
+}
+.page-title .card{ 
+    background: #fff;
+    border: 1px dashed #ffa20c;
+}
+.page-title .card-body{
+    padding: 0;
+}
+.page-title .card-title{
+
+}
+.page-title .card-title span{
+    border-radius: 4px;
+    background: #fff;
+    color: #000;
+    font-size: 14px;
+    min-width: 135px;
+    position: relative;
+    top: -2px;
+}

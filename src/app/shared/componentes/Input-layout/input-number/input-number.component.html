@@ -1,0 +1,22 @@
+<div class="field" [ngClass]="{'error': (_input.hasError('required') && _input.dirty)||_input.hasError('min')||_input.hasError('max')||(step && _input.value % step !== 0 && _input.value % step >0)}">
+  <label>
+    {{label}}
+  <i class="warning" *ngIf="warning">
+    ({{warning}})
+  </i>
+  </label>
+  <div [ngClass]="{'ui right labeled input':inputLabel}">
+    <input autocomplete="off" id="name" [attr.disabled]="!disabled ? '' : null" min="min" max="max" type="number" [formControl]="_input" (focus)="focus=true" (focusout)="focus=false" step="step"
+      popupHeader="نکته" popupText=" حداقل عدد وارد شده باید min و حداکثر max باشد" popupTrigger="focus">
+    <div *ngIf="inputLabel" [ngClass]="{'focus':focus && _input.valid}" class="ui basic label">
+      {{inputLabel}}
+
+    </div>
+  </div>
+
+  <div *ngIf="step && _input.value % step >0  " class="ui basic  red below pointing   prompt  label transition visible">فرمت {{label}} اشتباه است .</div>
+  <app-validation-message [variable]="_input" [require]="true" [arrow]="arrow" message="لطفا {{label}}  را وارد کنید"></app-validation-message>
+  <app-validation-message *ngIf="_input.hasError('min')" [variable]="_input" [require]="false" [arrow]="arrow" message="  حداقل {{label}} باید {{min}} {{inputLabel}} باشد  "></app-validation-message>
+  <app-validation-message *ngIf="_input.hasError('max')" [variable]="_input" [require]="false" [arrow]="arrow" message=" حداکثر {{label}} باید {{max}} {{inputLabel}} باشد "></app-validation-message>
+  <app-validation-message *ngIf="_input.value % step > 0" [variable]="_input" [require]="false" [arrow]="arrow" message=" فرمت {{label}} اشتباه است . "></app-validation-message>
+</div>

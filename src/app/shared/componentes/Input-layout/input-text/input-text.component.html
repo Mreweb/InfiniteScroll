@@ -1,0 +1,10 @@
+<!-- <label [class]="labelClassName">
+  {{label}}
+  <input [class]="className" [formControl]="_formControl" ngDefaultControl [placeholder]="placeholder" [required]="required" [name]="name" type="text" />
+</label> -->
+
+<label [class]="labelClassName">
+  {{label}}
+  <input [class]="className" [maxlength]="maxLength"  [formControl]="formControlCustom" ngDefaultControl type="text" />
+</label>
+
